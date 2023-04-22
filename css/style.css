@@ -1,0 +1,202 @@
+body{
+  margin: 0 auto;
+}
+/* Styles for header */
+header {
+  background-color: #0077B6;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 10px;
+}
+
+nav a:hover {
+  color: #D3D3D3;
+}
+
+.header-content {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 0.5rem;
+  color: #0077B6;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #D3D3D3;
+}
+
+/* Styles for main section */
+main {
+  padding: 4rem 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+/* Styles for form */
+label {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid #D3D3D3;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #0077B6;
+  border: none;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #005B8E;
+}
+
+/* Styles for footer */
+footer {
+  background-color: #D3D3D3;
+  color: #000000;
+  padding: 1rem;
+  text-align: center;
+}
+/* Animate header content on page load */
+.header-content {
+  animation-name: slide-up;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animate nav links on hover */
+nav a::after {
+  content: "";
+  display: block;
+  height: 0.2rem;
+  background-color: #FFFFFF;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Animate form submission button on hover */
+input[type="submit"] {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="submit"]:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+input[type="submit"]:hover:before {
+  width: 200%;
+  height: 200%;
+}
+
+/* Animate success message on form submission */
+.success-message {
+  animation-name: slide-down;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  display: none;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+body{
+  font-family: sans-serif;
+}
